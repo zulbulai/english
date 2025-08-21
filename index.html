@@ -3,387 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>राम नाम जप काउंटर</title>
+    <title>10 Premium English Learning Ebooks - Transform Your English Skills Today!</title>
+    <meta name="description" content="🔥 83% OFF! 10 comprehensive English learning ebooks. Grammar, Tenses, Vocabulary & more. 30,000+ lives transformed. Money back guarantee!">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Background Image -->
-    <div class="background-container">
-        <img src="background.jpg" alt="Background" class="background-image" onerror="this.style.display='none';">
-        <div class="background-overlay"></div>
+    <!-- Sticky Buy Button for Mobile -->
+    <div class="sticky-buy-btn">
+        <button class="btn btn--primary sticky-cta-btn">
+            ⚡ Buy Now ₹499 (83% OFF)
+        </button>
     </div>
 
-    <!-- Audio Element for Nam.mp3 -->
-    <audio id="nam-audio" preload="auto">
-        <source src="nam.mp3" type="audio/mpeg">
-        <source src="nam.mp3" type="audio/wav">
-        आपका ब्राउज़र ऑडियो तत्व का समर्थन नहीं करता।
-    </audio>
-
-    <!-- Home Screen -->
-    <div id="home-screen" class="screen active">
-        <!-- Header with Nam.png Image (10% of screen) -->
-        <header class="header">
-            <div class="header-image-container">
-                <img src="nam.png" alt="राम नाम" class="nam-image-header" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <h1 class="nam-title">राम नाम</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📚 English Pro</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#features">Features</a>
+                    <a href="#content">Content</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#pricing">Buy Now</a>
+                </nav>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Main Counter Area (60% of screen) -->
-        <main class="main-counter" id="counter-area">
-            <!-- Center Circle with Progress Ring (35% of screen) -->
-            <div class="center-circle-section">
-                <div class="progress-ring-container">
-                    <svg class="progress-ring" width="280" height="280">
-                        <defs>
-                            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-ring-bg" cx="140" cy="140" r="125" stroke-width="8" fill="none"/>
-                        <circle class="progress-ring-circle" cx="140" cy="140" r="125" stroke-width="8" fill="none" stroke="url(#ringGradient)"/>
-                    </svg>
-                    <div class="center-circle">
-                        <div class="ram-image-container">
-                            <img src="ram.png" alt="भगवान राम" class="ram-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                            <div class="ram-fallback">
-                                <span class="ram-text">राम</span>
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Urgency Timer -->
+                <div class="timer-section">
+                    <div class="timer-text">🔥 SPECIAL OFFER ENDS IN:</div>
+                    <div class="countdown-timer">
+                        <div class="timer-box">
+                            <span id="minutes">15</span>
+                            <label>मिनट</label>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-box">
+                            <span id="seconds">00</span>
+                            <label>सेकंड</label>
+                        </div>
+                    </div>
+                    <div class="urgency-text">⏰ केवल आज! 83% छूट समाप्त होने वाली है!</div>
+                </div>
+
+                <div class="hero-main">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            🏅 Qualified Teachers द्वारा बनाया गया • ⭐ 30,000+ Students • 🚀 Five Star Rated
+                        </div>
+                        <h1 class="hero-title">
+                            This 10 E-Books Bundle Will Help You To 
+                            <span class="highlight-text">Speak English Like A Pro</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            <span class="transform-text">✨ TRANSFORM YOUR ENGLISH IN 30 DAYS ✨</span>
+                        </h2>
+                        <div class="value-proposition">
+                            <div class="value-item">
+                                <span class="value-icon">📚</span>
+                                <strong>Complete Package:</strong> Grammar से Speaking तक सब कुछ
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🗣️</span>
+                                <strong>Hindi + English:</strong> आसान भाषा में समझाया गया
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">⏰</span>
+                                <strong>Lifetime Access:</strong> कभी भी, कहीं भी पढ़ें
+                            </div>
+                        </div>
+                        
+                        <div class="social-proof">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span>4.9/5 Rating (3,000+ Reviews)</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-cta">
+                            <button class="btn btn--primary btn--lg hero-buy-btn">
+                                🔥 Get All 10 E-Books - ₹499 Only
+                            </button>
+                            <button class="btn btn--secondary btn--lg instant-buy-btn">
+                                ⚡ Instant Buy Now
+                            </button>
+                            <div class="trust-badges">
+                                <span>🔒 Secure Payment</span>
+                                <span>💳 All Cards Accepted</span>
+                                <span>📱 Instant Download</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Carousel -->
+                    <div class="hero-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="carouselTrack">
+                                <div class="carousel-slide active">
+                                    <img src="1.jpg" alt="English Learning Ebooks Bundle 1" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="2.jpg" alt="English Learning Ebooks Bundle 2" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="3.jpg" alt="English Learning Ebooks Bundle 3" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="4.jpg" alt="English Learning Ebooks Bundle 4" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="5.jpg" alt="English Learning Ebooks Bundle 5" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="6.jpg" alt="English Learning Ebooks Bundle 6" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="7.jpg" alt="English Learning Ebooks Bundle 7" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="8.jpg" alt="English Learning Ebooks Bundle 8" class="carousel-image">
+                                </div>
+                            </div>
+                            <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+                            <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+                            <div class="carousel-indicators" id="carouselIndicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                                <span class="indicator" data-slide="3"></span>
+                                <span class="indicator" data-slide="4"></span>
+                                <span class="indicator" data-slide="5"></span>
+                                <span class="indicator" data-slide="6"></span>
+                                <span class="indicator" data-slide="7"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Counter Section (25% of screen) -->
-            <div class="counter-section">
-                <div class="counter-card">
-                    <h2 class="counter-title">RAM NAAM COUNTER</h2>
-                    <div class="odometer-container" id="odometer-container">
-                        <!-- 5 digit boxes will be populated by JavaScript -->
-                    </div>
-                    <div class="progress-section">
-                        <div class="progress-info">
-                            <span class="progress-percentage" id="progress-percentage">0%</span>
-                            <span class="progress-goal" id="progress-goal">2400</span>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill" id="progress-bar-fill"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Bottom Navigation (15% of screen) -->
-        <nav class="bottom-nav">
-            <button class="nav-btn active" data-screen="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">होम</span>
-            </button>
-            <button class="nav-btn" data-screen="dashboard">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">डैशबोर्ड</span>
-            </button>
-            <button class="nav-btn" data-screen="resources">
-                <span class="nav-icon">📖</span>
-                <span class="nav-label">संसाधन</span>
-            </button>
-            <button class="nav-btn" data-screen="settings">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">सेटिंग्स</span>
-            </button>
-            <button class="nav-btn" data-screen="share">
-                <span class="nav-icon">📲</span>
-                <span class="nav-label">शेयर</span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Dashboard Screen -->
-    <div id="dashboard-screen" class="screen">
-        <header class="header">
-            <h2 class="screen-title">डैशबोर्ड</h2>
-        </header>
-
-        <main class="dashboard-content">
-            <!-- Lifetime Stats -->
-            <div class="stats-card lifetime-stats">
-                <h3>जीवनकाल कुल</h3>
-                <div class="lifetime-number" id="lifetime-count">0</div>
-                <p>कुल नाम जप</p>
-            </div>
-
-            <!-- Streak Info -->
-            <div class="stats-card streak-stats">
-                <h3>वर्तमान स्ट्रीक</h3>
-                <div class="streak-number" id="current-streak">0</div>
-                <p>लगातार दिन</p>
-            </div>
-
-            <!-- Chart Tabs -->
-            <div class="chart-tabs">
-                <button class="chart-tab active" data-period="daily">दैनिक</button>
-                <button class="chart-tab" data-period="weekly">साप्ताहिक</button>
-                <button class="chart-tab" data-period="monthly">मासिक</button>
-                <button class="chart-tab" data-period="yearly">वार्षिक</button>
-                <button class="chart-tab" data-period="lifetime">जीवनकाल</button>
-            </div>
-
-            <!-- Chart Container -->
-            <div class="chart-container" style="position: relative; height: 300px;">
-                <canvas id="stats-chart"></canvas>
-            </div>
-
-            <!-- Achievement Cards -->
-            <div class="achievements-section">
-                <h3>उपलब्धियां</h3>
-                <div class="achievements-grid" id="achievements-grid">
-                    <!-- Achievements will be populated by JavaScript -->
-                </div>
-            </div>
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-btn" data-screen="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">होम</span>
-            </button>
-            <button class="nav-btn active" data-screen="dashboard">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">डैशबोर्ड</span>
-            </button>
-            <button class="nav-btn" data-screen="resources">
-                <span class="nav-icon">📖</span>
-                <span class="nav-label">संसाधन</span>
-            </button>
-            <button class="nav-btn" data-screen="settings">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">सेटिंग्स</span>
-            </button>
-            <button class="nav-btn" data-screen="share">
-                <span class="nav-icon">📲</span>
-                <span class="nav-label">शेयर</span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Resources Screen -->
-    <div id="resources-screen" class="screen">
-        <header class="header">
-            <h2 class="screen-title">संसाधन</h2>
-        </header>
-
-        <main class="resources-content">
-            <div class="resource-card">
-                <h3>राम भजन</h3>
-                <p>सुंदर राम भजन और आरती संग्रह</p>
-                <a href="https://www.youtube.com/results?search_query=ram+bhajan" target="_blank" class="btn btn--primary">
-                    देखें
-                </a>
-            </div>
-
-            <div class="resource-card">
-                <h3>रामायण</h3>
-                <p>श्रीमद्वाल्मीकि रामायण और अन्य धर्मग्रंथ</p>
-                <a href="https://www.valmiki.iitk.ac.in/" target="_blank" class="btn btn--primary">
-                    पढ़ें
-                </a>
-            </div>
-
-            <div class="resource-card">
-                <h3>सत्संग समुदाय</h3>
-                <p>अन्य भक्तों से जुड़ें और सत्संग में भाग लें</p>
-                <a href="https://t.me/ramnamjap" target="_blank" class="btn btn--primary">
-                    जुड़ें
-                </a>
-            </div>
-
-            <div class="resource-card">
-                <h3>राम मंदिर लाइव दर्शन</h3>
-                <p>अयोध्या राम मंदिर का लाइव दर्शन</p>
-                <a href="https://www.youtube.com/watch?v=live_darshan" target="_blank" class="btn btn--primary">
-                    दर्शन करें
-                </a>
-            </div>
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-btn" data-screen="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">होम</span>
-            </button>
-            <button class="nav-btn" data-screen="dashboard">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">डैशबोर्ड</span>
-            </button>
-            <button class="nav-btn active" data-screen="resources">
-                <span class="nav-icon">📖</span>
-                <span class="nav-label">संसाधन</span>
-            </button>
-            <button class="nav-btn" data-screen="settings">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">सेटिंग्स</span>
-            </button>
-            <button class="nav-btn" data-screen="share">
-                <span class="nav-icon">📲</span>
-                <span class="nav-label">शेयर</span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Settings Screen -->
-    <div id="settings-screen" class="screen">
-        <header class="header">
-            <h2 class="screen-title">सेटिंग्स</h2>
-        </header>
-
-        <main class="settings-content">
-            <div class="settings-section">
-                <h3>दैनिक लक्ष्य</h3>
-                <div class="setting-item">
-                    <label for="daily-goal-input">प्रति दिन नाम जप का लक्ष्य</label>
-                    <input type="number" id="daily-goal-input" class="form-control" value="2400" min="1" max="100000">
-                </div>
-                <button class="btn btn--primary" id="save-goal-btn">सेव करें</button>
-            </div>
-
-            <div class="settings-section">
-                <h3>ध्वनि सेटिंग्स</h3>
-                <div class="setting-item">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="sound-toggle" checked>
-                        <span class="checkmark"></span>
-                        प्रत्येक काउंट पर ध्वनि
-                    </label>
-                </div>
-                <div class="setting-item">
-                    <label for="volume-slider">आवाज़ का स्तर</label>
-                    <input type="range" id="volume-slider" class="volume-control" min="0" max="1" step="0.1" value="0.7">
-                    <span class="volume-display">70%</span>
-                </div>
-                <button class="btn btn--secondary" id="test-sound-btn">ध्वनि परखें</button>
-            </div>
-
-            <div class="settings-section">
-                <h3>डेटा प्रबंधन</h3>
-                <button class="btn btn--secondary" id="export-data-btn">डेटा एक्सपोर्ट करें</button>
-                <button class="btn btn--outline" id="reset-data-btn">सभी डेटा रीसेट करें</button>
-            </div>
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-btn" data-screen="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">होम</span>
-            </button>
-            <button class="nav-btn" data-screen="dashboard">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">डैशबोर्ड</span>
-            </button>
-            <button class="nav-btn" data-screen="resources">
-                <span class="nav-icon">📖</span>
-                <span class="nav-label">संसाधन</span>
-            </button>
-            <button class="nav-btn active" data-screen="settings">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">सेटिंग्स</span>
-            </button>
-            <button class="nav-btn" data-screen="share">
-                <span class="nav-icon">📲</span>
-                <span class="nav-label">शेयर</span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Share Screen -->
-    <div id="share-screen" class="screen">
-        <header class="header">
-            <h2 class="screen-title">शेयर करें</h2>
-        </header>
-
-        <main class="share-content">
-            <div class="share-card">
-                <div class="share-stats">
-                    <h3>आपकी प्रगति</h3>
-                    <div class="share-stat">
-                        <span class="share-stat-number" id="share-total-count">0</span>
-                        <span class="share-stat-label">कुल नाम जप</span>
-                    </div>
-                    <div class="share-stat">
-                        <span class="share-stat-number" id="share-today-count">0</span>
-                        <span class="share-stat-label">आज के नाम जप</span>
-                    </div>
-                    <div class="share-stat">
-                        <span class="share-stat-number" id="share-streak-count">0</span>
-                        <span class="share-stat-label">लगातार दिन</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="share-buttons">
-                <button class="btn btn--primary share-btn" id="whatsapp-share">
-                    <span class="share-icon">📱</span>
-                    WhatsApp पर शेयर करें
-                </button>
-                <button class="btn btn--secondary share-btn" id="copy-link">
-                    <span class="share-icon">📋</span>
-                    लिंक कॉपी करें
-                </button>
-                <button class="btn btn--outline share-btn" id="general-share">
-                    <span class="share-icon">📤</span>
-                    अन्य ऐप्स में शेयर करें
-                </button>
-            </div>
-
-            <div class="share-message">
-                <h3>शेयर संदेश</h3>
-                <textarea id="share-text" class="form-control" readonly rows="4">मैं 'राम नाम जप काउंटर' ऐप इस्तेमाल कर रहा हूँ। आप भी जुड़ें और रोज़ नाम जप करें।
-जय श्री राम!</textarea>
-            </div>
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-btn" data-screen="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">होम</span>
-            </button>
-            <button class="nav-btn" data-screen="dashboard">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">डैशबोर्ड</span>
-            </button>
-            <button class="nav-btn" data-screen="resources">
-                <span class="nav-icon">📖</span>
-                <span class="nav-label">संसाधन</span>
-            </button>
-            <button class="nav-btn" data-screen="settings">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">सेटिंग्स</span>
-            </button>
-            <button class="nav-btn active" data-screen="share">
-                <span class="nav-icon">📲</span>
-                <span class="nav-label">शेयर</span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Achievement Modal -->
-    <div id="achievement-modal" class="modal hidden">
-        <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content">
-            <div class="achievement-icon">🏆</div>
-            <h3 id="achievement-title">बधाई हो!</h3>
-            <p id="achievement-message">आपने एक नया माइलस्टोन हासिल किया है!</p>
-            <button class="btn btn--primary" id="close-achievement">ठीक है</button>
         </div>
-    </div>
+    </section>
+
+    <!-- Trust & Authority Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-badges-grid">
+                <div class="trust-badge">
+                    <div class="trust-icon">👨‍🏫</div>
+                    <div class="trust-text">
+                        <strong>Qualified Teachers</strong>
+                        <span>Expert बनाया गया Content</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">🛡️</div>
+                    <div class="trust-text">
+                        <strong>100% Money Back</strong>
+                        <span>30 Days Guarantee</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">⚡</div>
+                    <div class="trust-text">
+                        <strong>Instant Access</strong>
+                        <span>5 Minutes में Download</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">🔒</div>
+                    <div class="trust-text">
+                        <strong>Secure Payment</strong>
+                        <span>SSL Encrypted</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">
+                Why 30,000+ Students Choose Our Ebooks?
+                <span class="section-subtitle">🏆 India's #1 English Learning Resource</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏅</div>
+                    <h3>All 10 E-Books Created By Highly Qualified Teachers</h3>
+                    <p>Years of teaching experience से बने हुए professional content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Five Star Rated by 30,000+ Students</h3>
+                    <p>Real students के genuine reviews और success stories</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>30,000+ Lives Transformed Successfully</h3>
+                    <p>Job interviews, business meetings में confidence बढ़ाया</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Lifetime Access - No Expiry Date</h3>
+                    <p>एक बार खरीदें, जीवनभर पढ़ें। Koi hidden charges नहीं</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Soft Copy PDF - Read Anywhere, Anytime</h3>
+                    <p>Mobile, tablet, laptop में read करें या print करके offline पढ़ें</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3>Bilingual Content - Hindi + English Explanations</h3>
+                    <p>Hindi में explain किया गया for better understanding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Overview -->
+    <section id="content" class="content-overview">
+        <div class="container">
+            <h2 class="section-title">Complete Package - 10 Premium Ebooks</h2>
+            <div class="content-intro">
+                <p>🎯 Beginner से Advanced level तक complete English learning solution</p>
+            </div>
+            <div class="ebooks-grid">
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #ff4444;">1</div>
+                    <h3>Complete Grammar Guide</h3>
+                    <p>Master English grammar with easy Hindi explanations</p>
+                    <span class="pages">120+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #ff6600;">2</div>
+                    <h3>Tenses Made Simple</h3>
+                    <p>Learn all 12 tenses with practical examples</p>
+                    <span class="pages">95+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #ffaa00;">3</div>
+                    <h3>Vocabulary Builder</h3>
+                    <p>Expand your word power with 1000+ essential words</p>
+                    <span class="pages">150+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #00aa44;">4</div>
+                    <h3>Idioms & Phrases</h3>
+                    <p>Common idioms used in daily conversation</p>
+                    <span class="pages">80+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #0088ff;">5</div>
+                    <h3>Daily Conversations</h3>
+                    <p>Real-life conversation practice scenarios</p>
+                    <span class="pages">110+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #8844ff;">6</div>
+                    <h3>Interview English</h3>
+                    <p>Professional English for job interviews</p>
+                    <span class="pages">75+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #ff44aa;">7</div>
+                    <h3>Business English</h3>
+                    <p>English for workplace communication</p>
+                    <span class="pages">130+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #44ffaa;">8</div>
+                    <h3>Pronunciation Guide</h3>
+                    <p>Speak English with correct pronunciation</p>
+                    <span class="pages">90+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #ffaa44;">9</div>
+                    <h3>Writing Skills</h3>
+                    <p>Improve your English writing abilities</p>
+                    <span class="pages">100+ Pages</span>
+                </div>
+                <div class="ebook-item">
+                    <div class="ebook-number" style="background-color: #aa44ff;">10</div>
+                    <h3>Speaking Confidence</h3>
+                    <p>Build confidence to speak English fluently</p>
+                    <span class="pages">85+ Pages</span>
+                </div>
+            </div>
+            <div class="content-cta">
+                <button class="btn btn--primary btn--lg content-buy-btn">
+                    🔥 Get All 10 E-Books Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "I loved all 10 eBooks. Perfect for self-study. My confidence in speaking English has increased. Very helpful and effective content!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div class="author-info">
+                            <strong>Rahul Sharma</strong>
+                            <span>Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "These books are amazing! Got job in MNC after studying from these ebooks. Highly recommended!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <strong>Priya Singh</strong>
+                            <span>Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "Best investment I made for learning English. Clear Hindi explanations made everything easy to understand."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div class="author-info">
+                            <strong>Amit Kumar</strong>
+                            <span>Pune</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="pricing-wrapper">
+                <div class="pricing-header">
+                    <h2>🔥 Limited Time Offer - Only Today!</h2>
+                    <p>All 10 Premium Ebooks + Lifetime Access + Money Back Guarantee</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="discount-banner">
+                        <span>🏷️ 83% OFF - SAVE ₹2,500</span>
+                    </div>
+                    <div class="price-display">
+                        <span class="original-price">₹2,999</span>
+                        <span class="current-price">₹499</span>
+                        <div class="savings">You Save ₹2,500!</div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-check">✅ All 10 Premium Ebooks (1000+ Pages)</div>
+                        <div class="feature-check">✅ Lifetime Access - No Expiry</div>
+                        <div class="feature-check">✅ Hindi + English Explanations</div>
+                        <div class="feature-check">✅ PDF Format - Mobile Friendly</div>
+                        <div class="feature-check">✅ Instant Download in 5 Minutes</div>
+                        <div class="feature-check">✅ Print Friendly for Offline Study</div>
+                        <div class="feature-check">✅ 30 Days Money Back Guarantee</div>
+                        <div class="feature-check">✅ 24/7 Email Support</div>
+                    </div>
+
+                    <div class="guarantee-badge">
+                        <div class="guarantee-icon">🛡️</div>
+                        <div class="guarantee-text">
+                            <strong>100% Money Back Guarantee</strong>
+                            <span>Not satisfied? Get full refund within 30 days</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <button class="btn btn--primary btn--lg btn--full-width main-buy-btn">
+                            🔥 Buy All 10 E-Books - ₹499 Only
+                        </button>
+                        <button class="btn btn--secondary btn--lg btn--full-width instant-checkout-btn">
+                            ⚡ Instant Checkout
+                        </button>
+                    </div>
+
+                    <div class="payment-security">
+                        <div class="security-text">🔒 100% Secure Payment</div>
+                        <div class="payment-methods">
+                            <span>💳 Credit/Debit Cards</span>
+                            <span>📱 UPI/Paytm</span>
+                            <span>🏦 Net Banking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Social Media Section -->
+    <section class="contact-social">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <strong>Phone/WhatsApp</strong>
+                        <a href="tel:7905350614">7905350614</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <strong>Email Support</strong>
+                        <a href="mailto:padhteraho2021@gmail.com">padhteraho2021@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-media">
+                <h3>Follow Us on Social Media</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/englishpro" target="_blank" class="social-link facebook">
+                        <div class="social-icon">📘</div>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/rozpadhteraho" target="_blank" class="social-link instagram">
+                        <div class="social-icon">📷</div>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://youtube.com/@englishpro" target="_blank" class="social-link youtube">
+                        <div class="social-icon">📺</div>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 English Pro</h3>
+                    <p>Transform your English skills with our comprehensive ebooks. 30,000+ students trust us for quality English learning content.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" target="_blank">About Us</a></li>
+                        <li><a href="#contact" target="_blank">Contact Us</a></li>
+                        <li><a href="#privacy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="#terms" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="#refund" target="_blank">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 padhteraho2021@gmail.com</p>
+                    <p>📞 7905350614</p>
+                    <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 English Pro. All rights reserved. | Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
