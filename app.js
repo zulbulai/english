@@ -1,5 +1,5 @@
 // Premium English Learning Ebooks Landing Page - Complete Production Ready JavaScript
-// Full Razorpay Integration & Advanced Features - FIXED VERSION
+// Full Razorpay Integration & Advanced Features - UPDATED VERSION
 
 // Global Configuration
 const CONFIG = {
@@ -7,9 +7,9 @@ const CONFIG = {
         key: 'rzp_live_R6zs7J50awSUhd',
         amount: 49900, // ₹499 in paisa
         currency: 'INR',
-        name: 'Spoken English School',
+        name: 'Padhteraho18',
         description: '10 Premium English Learning Ebooks Bundle',
-        image: 'https://example.com/logo.png',
+        image: 'logo.png',
         theme: {
             color: '#ff4444'
         },
@@ -19,7 +19,7 @@ const CONFIG = {
             contact: ''
         },
         notes: {
-            address: 'Spoken English School'
+            address: 'Padhteraho18'
         }
     },
     timer: {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeVisibilityHandling();
     initializeKeyboardShortcuts();
     
-    // Initialize payment buttons - FIXED
+    // Initialize payment buttons - UPDATED
     initializePaymentButtons();
     
     // Initialize Razorpay
@@ -68,21 +68,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ================================
-// PAYMENT BUTTONS INITIALIZATION - FIXED
+// PAYMENT BUTTONS INITIALIZATION - UPDATED
 // ================================
 
 function initializePaymentButtons() {
-    // Get all buy buttons with various selectors
-    const buyButtons = document.querySelectorAll(`
-        .hero-buy-btn, .instant-buy-btn, .content-buy-btn,
-        .main-buy-btn, .instant-checkout-btn, .sticky-cta-btn,
-        button[onclick*="initializeRazorpayPayment"],
-        .btn:not(.modal-close-btn):not(.success-close-btn):not(.contact-support-btn)
-    `);
+    // Get all payment buttons
+    const paymentButtons = document.querySelectorAll('.payment-btn');
     
-    console.log(`Found ${buyButtons.length} payment buttons`);
+    console.log(`Found ${paymentButtons.length} payment buttons`);
     
-    buyButtons.forEach((button, index) => {
+    paymentButtons.forEach((button, index) => {
         // Remove any existing onclick handlers
         button.removeAttribute('onclick');
         
@@ -92,17 +87,7 @@ function initializePaymentButtons() {
             e.stopPropagation();
             
             console.log(`Payment button ${index + 1} clicked:`, button.textContent.trim());
-            
-            // Check if button contains buy/payment related text
-            const buttonText = button.textContent.toLowerCase();
-            if (buttonText.includes('buy') || 
-                buttonText.includes('checkout') || 
-                buttonText.includes('₹') ||
-                buttonText.includes('get all') ||
-                buttonText.includes('instant')) {
-                
-                initializeRazorpayPayment(button);
-            }
+            initializeRazorpayPayment(button);
         });
         
         console.log(`Attached payment handler to button ${index + 1}:`, button.textContent.trim());
@@ -112,7 +97,7 @@ function initializePaymentButtons() {
 }
 
 // ================================
-// RAZORPAY PAYMENT INTEGRATION - FIXED
+// RAZORPAY PAYMENT INTEGRATION - UPDATED
 // ================================
 
 function initializeRazorpay() {
@@ -153,14 +138,14 @@ function initializeRazorpayPayment(buttonElement) {
         return;
     }
     
-    // Initialize Razorpay options
+    // Initialize Razorpay options - UPDATED with Padhteraho18 and logo.png
     const options = {
         key: CONFIG.razorpay.key,
         amount: CONFIG.razorpay.amount,
         currency: CONFIG.razorpay.currency,
-        name: CONFIG.razorpay.name,
+        name: CONFIG.razorpay.name, // Padhteraho18
         description: CONFIG.razorpay.description,
-        image: CONFIG.razorpay.image,
+        image: CONFIG.razorpay.image, // logo.png
         order_id: '', // Will be generated from backend in production
         handler: function (response) {
             handlePaymentSuccess(response, buttonElement);
@@ -173,7 +158,8 @@ function initializeRazorpayPayment(buttonElement) {
         notes: {
             address: CONFIG.razorpay.notes.address,
             ebook_bundle: '10_premium_english_ebooks',
-            source: 'landing_page'
+            source: 'landing_page',
+            company: 'Padhteraho18'
         },
         theme: {
             color: CONFIG.razorpay.theme.color
@@ -235,6 +221,7 @@ function handleDemoPaymentSuccess(buttonElement) {
         payment_id: demoResponse.razorpay_payment_id,
         order_id: demoResponse.razorpay_order_id,
         signature: demoResponse.razorpay_signature,
+        company: 'Padhteraho18',
         demo_mode: true
     });
     
@@ -258,7 +245,8 @@ function handlePaymentSuccess(response, buttonElement) {
     trackConversion('purchase_completed', {
         payment_id: response.razorpay_payment_id,
         order_id: response.razorpay_order_id,
-        signature: response.razorpay_signature
+        signature: response.razorpay_signature,
+        company: 'Padhteraho18'
     });
     
     // Show success modal
@@ -281,7 +269,8 @@ function handlePaymentFailure(response, buttonElement) {
     trackEvent('payment_failed', {
         error_code: response.error.code,
         error_description: response.error.description,
-        payment_id: response.error.metadata?.payment_id
+        payment_id: response.error.metadata?.payment_id,
+        company: 'Padhteraho18'
     });
     
     // Show retry option
@@ -296,7 +285,8 @@ function handlePaymentDismiss(buttonElement) {
     
     // Track dismissal
     trackEvent('payment_dismissed', {
-        button_text: buttonElement.textContent.trim()
+        button_text: buttonElement.textContent.trim(),
+        company: 'Padhteraho18'
     });
     
     // Show dismissal message
@@ -312,7 +302,8 @@ function handlePaymentError(error, buttonElement) {
     // Track error
     trackEvent('payment_error', {
         error_message: error.message,
-        error_stack: error.stack
+        error_stack: error.stack,
+        company: 'Padhteraho18'
     });
     
     // Show error message
@@ -387,6 +378,9 @@ function showSuccessModal(paymentResponse) {
                         <div class="payment-id">
                             <small>Payment ID: ${paymentResponse.razorpay_payment_id}</small>
                         </div>
+                        <div class="company-info">
+                            <small>Company: Padhteraho18</small>
+                        </div>
                     </div>
                 </div>
                 
@@ -417,13 +411,13 @@ function showSuccessModal(paymentResponse) {
                 <div class="social-follow">
                     <h3>📱 Follow Us for More Content</h3>
                     <div class="social-buttons">
-                        <a href="https://facebook.com/spokenenglishschool" target="_blank" class="social-btn facebook-btn">
+                        <a href="https://www.facebook.com/share/1Lq1UModaK/" target="_blank" class="social-btn facebook-btn">
                             📘 Facebook
                         </a>
                         <a href="https://www.instagram.com/rozpadhteraho" target="_blank" class="social-btn instagram-btn">
                             📷 Instagram
                         </a>
-                        <a href="https://youtube.com/@spokenenglishschool" target="_blank" class="social-btn youtube-btn">
+                        <a href="https://www.youtube.com/@englishwithamaresh" target="_blank" class="social-btn youtube-btn">
                             📺 YouTube
                         </a>
                     </div>
@@ -435,7 +429,7 @@ function showSuccessModal(paymentResponse) {
                 
                 <div class="success-footer">
                     <p>🔒 Your payment is secure and processed by Razorpay</p>
-                    <p>💌 Thank you for choosing English Pro!</p>
+                    <p>💌 Thank you for choosing Padhteraho18!</p>
                 </div>
             </div>
         </div>
@@ -563,7 +557,7 @@ function updateTimerDisplay(minutesDisplay, secondsDisplay, minutes, seconds) {
 function addUrgencyEffects(minutes, seconds) {
     const timerBoxes = document.querySelectorAll('.timer-box');
     const urgencyText = document.querySelector('.urgency-text');
-    const buyButtons = document.querySelectorAll('.btn--primary');
+    const buyButtons = document.querySelectorAll('.payment-btn');
     
     if (minutes < 5) {
         timerBoxes.forEach(box => {
@@ -585,7 +579,7 @@ function addUrgencyEffects(minutes, seconds) {
         
         buyButtons.forEach(btn => {
             if (!btn.classList.contains('loading')) {
-                btn.style.animation = 'buyButtonGlow 1s infinite';
+                btn.style.animation = 'paymentPulse 0.8s infinite';
             }
         });
     }
@@ -1052,7 +1046,8 @@ function initializePerformanceMonitoring() {
         trackEvent('page_performance', {
             load_time: loadTime,
             dom_ready: perfData.domContentLoadedEventEnd - perfData.navigationStart,
-            first_paint: perfData.responseEnd - perfData.navigationStart
+            first_paint: perfData.responseEnd - perfData.navigationStart,
+            company: 'Padhteraho18'
         });
     });
     
@@ -1063,7 +1058,8 @@ function initializePerformanceMonitoring() {
             message: event.error.message,
             filename: event.filename,
             lineno: event.lineno,
-            stack: event.error.stack
+            stack: event.error.stack,
+            company: 'Padhteraho18'
         });
     });
     
@@ -1080,6 +1076,7 @@ function trackButtonClick(buttonText) {
         page_location: window.location.href,
         timestamp: new Date().toISOString(),
         user_agent: navigator.userAgent,
+        company: 'Padhteraho18',
         viewport: {
             width: window.innerWidth,
             height: window.innerHeight
@@ -1094,6 +1091,7 @@ function trackConversion(eventName, data = {}) {
         event_name: eventName,
         value: CONFIG.razorpay.amount / 100,
         currency: CONFIG.razorpay.currency,
+        company: 'Padhteraho18',
         ...data,
         timestamp: new Date().toISOString()
     };
@@ -1122,6 +1120,7 @@ function trackConversion(eventName, data = {}) {
 function trackEvent(eventName, data = {}) {
     const eventData = {
         event: eventName,
+        company: 'Padhteraho18',
         ...data,
         session_id: getSessionId(),
         user_id: getUserId()
@@ -1184,7 +1183,7 @@ function addSuccessModalStyles() {
         .order-summary h3 { color: #00aa44; margin-bottom: 1rem; }
         .purchased-item, .discount-applied, .order-total { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .order-total { border-bottom: none; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 2px solid #00aa44; }
-        .payment-id { margin-top: 1rem; font-family: monospace; color: #cccccc; }
+        .payment-id, .company-info { margin-top: 1rem; font-family: monospace; color: #cccccc; }
         .download-info { background: rgba(255, 102, 0, 0.1); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border: 1px solid rgba(255, 102, 0, 0.3); }
         .download-info h3 { color: #ff6600; margin-bottom: 1rem; }
         .email-info { background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 5px; margin-top: 1rem; }
@@ -1257,10 +1256,11 @@ window.EnglishEbooksApp = {
 };
 
 console.log('🎯 English Ebooks Landing Page - All Systems Ready!');
-console.log('💳 Razorpay Integration: Active');
+console.log('💳 Razorpay Integration: Active (Padhteraho18)');
 console.log('⏰ Timer: Active');
 console.log('🎠 Carousel: Active');
 console.log('📱 Mobile Optimized: Yes');
 console.log('🔒 Secure Payment: Yes');
 console.log('📈 Analytics: Active');
+console.log('🎬 Payment Button Animations: Active');
 console.log('🚀 Ready for Production!');
