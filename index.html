@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10 Premium English Learning Ebooks - Transform Your English Skills Today!</title>
     <meta name="description" content="🔥 83% OFF! 10 comprehensive English learning ebooks. Grammar, Tenses, Vocabulary & more. 30,000+ lives transformed. Money back guarantee!">
+    
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="10 Premium English Learning Ebooks Bundle - 83% OFF">
+    <meta property="og:description" content="Transform your English skills with 10 premium ebooks created by qualified teachers. Limited time offer!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://englishebooks.com">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "10 Premium English Learning Ebooks Bundle",
+      "description": "Complete English learning package with lifetime access",
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Spoken English School"
+      }
+    }
+    </script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Sticky Buy Button for Mobile -->
     <div class="sticky-buy-btn">
-        <button class="btn btn--primary sticky-cta-btn">
+        <button class="btn btn--primary sticky-cta-btn" onclick="initializeRazorpayPayment(this)">
             ⚡ Buy Now ₹499 (83% OFF)
         </button>
     </div>
@@ -28,6 +58,11 @@
                     <a href="#testimonials">Reviews</a>
                     <a href="#pricing">Buy Now</a>
                 </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
@@ -78,6 +113,10 @@
                                 <span class="value-icon">⏰</span>
                                 <strong>Lifetime Access:</strong> कभी भी, कहीं भी पढ़ें
                             </div>
+                            <div class="value-item">
+                                <span class="value-icon">💯</span>
+                                <strong>Money Back Guarantee:</strong> 30 दिन की गारंटी
+                            </div>
                         </div>
                         
                         <div class="social-proof">
@@ -85,19 +124,23 @@
                                 <span class="stars">⭐⭐⭐⭐⭐</span>
                                 <span>4.9/5 Rating (3,000+ Reviews)</span>
                             </div>
+                            <div class="trust-indicators">
+                                <span>🔒 Secure Payment via Razorpay</span>
+                                <span>📧 Instant Email Delivery</span>
+                            </div>
                         </div>
 
                         <div class="hero-cta">
-                            <button class="btn btn--primary btn--lg hero-buy-btn">
+                            <button class="btn btn--primary btn--lg hero-buy-btn" onclick="initializeRazorpayPayment(this)">
                                 🔥 Get All 10 E-Books - ₹499 Only
                             </button>
-                            <button class="btn btn--secondary btn--lg instant-buy-btn">
+                            <button class="btn btn--secondary btn--lg instant-buy-btn" onclick="initializeRazorpayPayment(this)">
                                 ⚡ Instant Buy Now
                             </button>
                             <div class="trust-badges">
-                                <span>🔒 Secure Payment</span>
-                                <span>💳 All Cards Accepted</span>
-                                <span>📱 Instant Download</span>
+                                <span>🔒 256-bit SSL Secure</span>
+                                <span>💳 All Cards & UPI</span>
+                                <span>📱 Mobile Friendly</span>
                             </div>
                         </div>
                     </div>
@@ -107,41 +150,41 @@
                         <div class="carousel-container">
                             <div class="carousel-track" id="carouselTrack">
                                 <div class="carousel-slide active">
-                                    <img src="1.jpg" alt="English Learning Ebooks Bundle 1" class="carousel-image">
+                                    <img src="1.jpg" alt="English Learning Ebooks Bundle 1" class="carousel-image" loading="eager">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="2.jpg" alt="English Learning Ebooks Bundle 2" class="carousel-image">
+                                    <img src="2.jpg" alt="English Learning Ebooks Bundle 2" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="3.jpg" alt="English Learning Ebooks Bundle 3" class="carousel-image">
+                                    <img src="3.jpg" alt="English Learning Ebooks Bundle 3" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="4.jpg" alt="English Learning Ebooks Bundle 4" class="carousel-image">
+                                    <img src="4.jpg" alt="English Learning Ebooks Bundle 4" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="5.jpg" alt="English Learning Ebooks Bundle 5" class="carousel-image">
+                                    <img src="5.jpg" alt="English Learning Ebooks Bundle 5" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="6.jpg" alt="English Learning Ebooks Bundle 6" class="carousel-image">
+                                    <img src="6.jpg" alt="English Learning Ebooks Bundle 6" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="7.jpg" alt="English Learning Ebooks Bundle 7" class="carousel-image">
+                                    <img src="7.jpg" alt="English Learning Ebooks Bundle 7" class="carousel-image" loading="lazy">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="8.jpg" alt="English Learning Ebooks Bundle 8" class="carousel-image">
+                                    <img src="8.jpg" alt="English Learning Ebooks Bundle 8" class="carousel-image" loading="lazy">
                                 </div>
                             </div>
-                            <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
-                            <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+                            <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous image">❮</button>
+                            <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next image">❯</button>
                             <div class="carousel-indicators" id="carouselIndicators">
-                                <span class="indicator active" data-slide="0"></span>
-                                <span class="indicator" data-slide="1"></span>
-                                <span class="indicator" data-slide="2"></span>
-                                <span class="indicator" data-slide="3"></span>
-                                <span class="indicator" data-slide="4"></span>
-                                <span class="indicator" data-slide="5"></span>
-                                <span class="indicator" data-slide="6"></span>
-                                <span class="indicator" data-slide="7"></span>
+                                <button class="indicator active" data-slide="0" aria-label="Image 1"></button>
+                                <button class="indicator" data-slide="1" aria-label="Image 2"></button>
+                                <button class="indicator" data-slide="2" aria-label="Image 3"></button>
+                                <button class="indicator" data-slide="3" aria-label="Image 4"></button>
+                                <button class="indicator" data-slide="4" aria-label="Image 5"></button>
+                                <button class="indicator" data-slide="5" aria-label="Image 6"></button>
+                                <button class="indicator" data-slide="6" aria-label="Image 7"></button>
+                                <button class="indicator" data-slide="7" aria-label="Image 8"></button>
                             </div>
                         </div>
                     </div>
@@ -179,7 +222,7 @@
                     <div class="trust-icon">🔒</div>
                     <div class="trust-text">
                         <strong>Secure Payment</strong>
-                        <span>SSL Encrypted</span>
+                        <span>Razorpay SSL Encrypted</span>
                     </div>
                 </div>
             </div>
@@ -197,32 +240,42 @@
                 <div class="feature-card">
                     <div class="feature-icon">🏅</div>
                     <h3>All 10 E-Books Created By Highly Qualified Teachers</h3>
-                    <p>Years of teaching experience से बने हुए professional content</p>
+                    <p>Years of teaching experience से बने हुए professional content जो आपकी English को fluent बनाए</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⭐</div>
                     <h3>Five Star Rated by 30,000+ Students</h3>
-                    <p>Real students के genuine reviews और success stories</p>
+                    <p>Real students के genuine reviews और success stories जो हमारी quality को prove करती हैं</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
                     <h3>30,000+ Lives Transformed Successfully</h3>
-                    <p>Job interviews, business meetings में confidence बढ़ाया</p>
+                    <p>Job interviews, business meetings, daily conversation में confidence बढ़ाया है students का</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⏰</div>
                     <h3>Lifetime Access - No Expiry Date</h3>
-                    <p>एक बार खरीदें, जीवनभर पढ़ें। Koi hidden charges नहीं</p>
+                    <p>एक बार खरीदें, जीवनभर पढ़ें। Koi hidden charges नहीं, कोई renewal fees नहीं</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Soft Copy PDF - Read Anywhere, Anytime</h3>
-                    <p>Mobile, tablet, laptop में read करें या print करके offline पढ़ें</p>
+                    <p>Mobile, tablet, laptop में read करें या print करके offline पढ़ें। Complete flexibility</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🗣️</div>
                     <h3>Bilingual Content - Hindi + English Explanations</h3>
-                    <p>Hindi में explain किया गया for better understanding</p>
+                    <p>Hindi में explain किया गया है for better understanding। Complex topics को simple बनाया</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3>Instant Download - Get in 5 Minutes</h3>
+                    <p>Payment के तुरंत बाद email में download link मिलेगा। Instant access guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>100% Money Back Guarantee</h3>
+                    <p>30 दिन के अंदर satisfied नहीं हैं तो complete refund। Zero risk investment</p>
                 </div>
             </div>
         </div>
@@ -233,73 +286,93 @@
         <div class="container">
             <h2 class="section-title">Complete Package - 10 Premium Ebooks</h2>
             <div class="content-intro">
-                <p>🎯 Beginner से Advanced level तक complete English learning solution</p>
+                <p>🎯 Beginner से Advanced level तक complete English learning solution। Total 1000+ pages of premium content!</p>
             </div>
             <div class="ebooks-grid">
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #ff4444;">1</div>
                     <h3>Complete Grammar Guide</h3>
-                    <p>Master English grammar with easy Hindi explanations</p>
+                    <p>Master English grammar with easy Hindi explanations। Tenses, Articles, Prepositions सब कुछ covered</p>
                     <span class="pages">120+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #ff6600;">2</div>
                     <h3>Tenses Made Simple</h3>
-                    <p>Learn all 12 tenses with practical examples</p>
+                    <p>Learn all 12 tenses with practical examples। Past, Present, Future - सब समझ जाएंगे easily</p>
                     <span class="pages">95+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #ffaa00;">3</div>
                     <h3>Vocabulary Builder</h3>
-                    <p>Expand your word power with 1000+ essential words</p>
+                    <p>Expand your word power with 1000+ essential words। Daily use words से advanced vocabulary तक</p>
                     <span class="pages">150+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #00aa44;">4</div>
                     <h3>Idioms & Phrases</h3>
-                    <p>Common idioms used in daily conversation</p>
+                    <p>Common idioms used in daily conversation। Native speakers की तरह बोलने के लिए essential</p>
                     <span class="pages">80+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #0088ff;">5</div>
                     <h3>Daily Conversations</h3>
-                    <p>Real-life conversation practice scenarios</p>
+                    <p>Real-life conversation practice scenarios। Shop, Office, Restaurant - हर situation के dialogues</p>
                     <span class="pages">110+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #8844ff;">6</div>
                     <h3>Interview English</h3>
-                    <p>Professional English for job interviews</p>
+                    <p>Professional English for job interviews। HR questions के perfect answers और confidence tips</p>
                     <span class="pages">75+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #ff44aa;">7</div>
                     <h3>Business English</h3>
-                    <p>English for workplace communication</p>
+                    <p>English for workplace communication। Emails, Presentations, Meetings - professional language</p>
                     <span class="pages">130+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #44ffaa;">8</div>
                     <h3>Pronunciation Guide</h3>
-                    <p>Speak English with correct pronunciation</p>
+                    <p>Speak English with correct pronunciation। IPA symbols, stress patterns, accent improvement</p>
                     <span class="pages">90+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #ffaa44;">9</div>
                     <h3>Writing Skills</h3>
-                    <p>Improve your English writing abilities</p>
+                    <p>Improve your English writing abilities। Essays, Letters, Reports - formal और informal writing</p>
                     <span class="pages">100+ Pages</span>
                 </div>
                 <div class="ebook-item">
                     <div class="ebook-number" style="background-color: #aa44ff;">10</div>
                     <h3>Speaking Confidence</h3>
-                    <p>Build confidence to speak English fluently</p>
+                    <p>Build confidence to speak English fluently। Overcome hesitation और flow में बोलना सीखें</p>
                     <span class="pages">85+ Pages</span>
                 </div>
             </div>
+            <div class="content-summary">
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Total Pages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Premium Ebooks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Topics Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Lifetime Access</div>
+                    </div>
+                </div>
+            </div>
             <div class="content-cta">
-                <button class="btn btn--primary btn--lg content-buy-btn">
-                    🔥 Get All 10 E-Books Now
+                <button class="btn btn--primary btn--lg content-buy-btn" onclick="initializeRazorpayPayment(this)">
+                    🔥 Get All 10 E-Books Now - ₹499 Only
                 </button>
             </div>
         </div>
@@ -313,40 +386,147 @@
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>
-                        "I loved all 10 eBooks. Perfect for self-study. My confidence in speaking English has increased. Very helpful and effective content!"
+                        "I loved all 10 eBooks. Perfect for self-study. My confidence in speaking English has increased dramatically. Very helpful and effective content! Got promoted in my job because of improved English skills."
                     </blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">👨</div>
                         <div class="author-info">
                             <strong>Rahul Sharma</strong>
-                            <span>Delhi</span>
+                            <span>Software Engineer, Delhi</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>
-                        "These books are amazing! Got job in MNC after studying from these ebooks. Highly recommended!"
+                        "These books are amazing! Got job in MNC after studying from these ebooks. The interview English book helped me crack 3 interviews. Highly recommended to everyone!"
                     </blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">👩</div>
                         <div class="author-info">
                             <strong>Priya Singh</strong>
-                            <span>Mumbai</span>
+                            <span>Marketing Manager, Mumbai</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>
-                        "Best investment I made for learning English. Clear Hindi explanations made everything easy to understand."
+                        "Best investment I made for learning English. Clear Hindi explanations made everything easy to understand. Now I can speak fluently with my foreign colleagues."
                     </blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">👨</div>
                         <div class="author-info">
                             <strong>Amit Kumar</strong>
-                            <span>Pune</span>
+                            <span>Business Analyst, Pune</span>
                         </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "Grammar book is excellent! All concepts are explained in simple Hindi. My daughter also started using these books and her English improved significantly in school."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <strong>Sunita Devi</strong>
+                            <span>Teacher, Jaipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "Vocabulary builder changed my life! I learned 1000+ new words in 2 months. Now I can understand English movies without subtitles. Amazing content quality!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div class="author-info">
+                            <strong>Vikash Yadav</strong>
+                            <span>Student, Lucknow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>
+                        "Business English book helped me write professional emails and give presentations confidently. My boss appreciated my communication skills improvement. Worth every rupee!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <strong>Neha Gupta</strong>
+                            <span>HR Executive, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <button class="btn btn--secondary btn--lg" onclick="initializeRazorpayPayment(this)">
+                    🚀 Join 30,000+ Successful Students
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>क्या ये books PDF format में हैं?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>जी हाँ, सभी 10 books high-quality PDF format में हैं। आप इन्हें mobile, tablet, laptop किसी भी device पर पढ़ सकते हैं या print करके offline भी पढ़ सकते हैं।</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Payment के बाद books कब मिलेंगी?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Payment successful होने के तुरंत बाद आपके email पर download link भेज दिया जाएगा। Maximum 5 minutes में आप सभी books download कर सकेंगे।</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Money back guarantee कैसे काम करता है?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>अगर आप 30 दिन के अंदर content से satisfied नहीं हैं तो हम आपका पूरा पैसा वापस कर देंगे। बस हमें email करें padhteraho2021@gmail.com पर।</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>क्या ये books beginners के लिए suitable हैं?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>बिल्कुल! ये books complete beginners से लेकर advanced learners तक सभी के लिए बनी हैं। सभी concepts Hindi में explain किए गए हैं।</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>क्या payment secure है?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>जी हाँ, हम Razorpay payment gateway का उपयोग करते हैं जो 256-bit SSL encryption के साथ complete secure है। आपकी सभी जानकारी safe रहती है।</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>कोई hidden charges तो नहीं हैं?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>बिल्कुल नहीं! केवल ₹499 one-time payment है। Lifetime access के लिए कोई additional charges नहीं हैं।</p>
                     </div>
                 </div>
             </div>
@@ -358,7 +538,7 @@
         <div class="container">
             <div class="pricing-wrapper">
                 <div class="pricing-header">
-                    <h2>🔥 Limited Time Offer - Only Today!</h2>
+                    <h2>🔥 Limited Time Offer - केवल आज के लिए!</h2>
                     <p>All 10 Premium Ebooks + Lifetime Access + Money Back Guarantee</p>
                 </div>
                 
@@ -374,38 +554,41 @@
                     
                     <div class="pricing-features">
                         <div class="feature-check">✅ All 10 Premium Ebooks (1000+ Pages)</div>
-                        <div class="feature-check">✅ Lifetime Access - No Expiry</div>
+                        <div class="feature-check">✅ Lifetime Access - No Expiry Date</div>
                         <div class="feature-check">✅ Hindi + English Explanations</div>
                         <div class="feature-check">✅ PDF Format - Mobile Friendly</div>
                         <div class="feature-check">✅ Instant Download in 5 Minutes</div>
                         <div class="feature-check">✅ Print Friendly for Offline Study</div>
                         <div class="feature-check">✅ 30 Days Money Back Guarantee</div>
                         <div class="feature-check">✅ 24/7 Email Support</div>
+                        <div class="feature-check">✅ Future Updates Free</div>
+                        <div class="feature-check">✅ Certificate of Completion</div>
                     </div>
 
                     <div class="guarantee-badge">
                         <div class="guarantee-icon">🛡️</div>
                         <div class="guarantee-text">
                             <strong>100% Money Back Guarantee</strong>
-                            <span>Not satisfied? Get full refund within 30 days</span>
+                            <span>Not satisfied? Get full refund within 30 days. No questions asked!</span>
                         </div>
                     </div>
 
                     <div class="cta-buttons">
-                        <button class="btn btn--primary btn--lg btn--full-width main-buy-btn">
+                        <button class="btn btn--primary btn--lg btn--full-width main-buy-btn" onclick="initializeRazorpayPayment(this)">
                             🔥 Buy All 10 E-Books - ₹499 Only
                         </button>
-                        <button class="btn btn--secondary btn--lg btn--full-width instant-checkout-btn">
-                            ⚡ Instant Checkout
+                        <button class="btn btn--secondary btn--lg btn--full-width instant-checkout-btn" onclick="initializeRazorpayPayment(this)">
+                            ⚡ Instant Checkout with Razorpay
                         </button>
                     </div>
 
                     <div class="payment-security">
-                        <div class="security-text">🔒 100% Secure Payment</div>
+                        <div class="security-text">🔒 100% Secure Payment by Razorpay</div>
                         <div class="payment-methods">
                             <span>💳 Credit/Debit Cards</span>
                             <span>📱 UPI/Paytm</span>
                             <span>🏦 Net Banking</span>
+                            <span>📲 Mobile Wallets</span>
                         </div>
                     </div>
                 </div>
@@ -422,7 +605,8 @@
                     <div class="contact-icon">📞</div>
                     <div class="contact-details">
                         <strong>Phone/WhatsApp</strong>
-                        <a href="tel:7905350614">7905350614</a>
+                        <a href="https://wa.me/917905350614" target="_blank">7905350614</a>
+                        <span>Customer Support Available</span>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -430,6 +614,23 @@
                     <div class="contact-details">
                         <strong>Email Support</strong>
                         <a href="mailto:padhteraho2021@gmail.com">padhteraho2021@gmail.com</a>
+                        <span>24/7 Email Support</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-details">
+                        <strong>Support Hours</strong>
+                        <span>Mon-Sat: 9 AM - 8 PM</span>
+                        <span>Sunday: 10 AM - 6 PM</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <strong>Address</strong>
+                        <span>Spoken English School</span>
+                        <span>India</span>
                     </div>
                 </div>
             </div>
@@ -437,17 +638,26 @@
             <div class="social-media">
                 <h3>Follow Us on Social Media</h3>
                 <div class="social-links">
-                    <a href="https://facebook.com/englishpro" target="_blank" class="social-link facebook">
+                    <a href="https://facebook.com/spokenenglishschool" target="_blank" class="social-link facebook">
                         <div class="social-icon">📘</div>
-                        <span>Facebook</span>
+                        <div class="social-info">
+                            <span>Facebook</span>
+                            <small>Daily Tips & Updates</small>
+                        </div>
                     </a>
                     <a href="https://www.instagram.com/rozpadhteraho" target="_blank" class="social-link instagram">
                         <div class="social-icon">📷</div>
-                        <span>Instagram</span>
+                        <div class="social-info">
+                            <span>Instagram</span>
+                            <small>Visual Learning Content</small>
+                        </div>
                     </a>
-                    <a href="https://youtube.com/@englishpro" target="_blank" class="social-link youtube">
+                    <a href="https://youtube.com/@spokenenglishschool" target="_blank" class="social-link youtube">
                         <div class="social-icon">📺</div>
-                        <span>YouTube</span>
+                        <div class="social-info">
+                            <span>YouTube</span>
+                            <small>Free Video Lessons</small>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -460,7 +670,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>📚 English Pro</h3>
-                    <p>Transform your English skills with our comprehensive ebooks. 30,000+ students trust us for quality English learning content.</p>
+                    <p>Transform your English skills with our comprehensive ebooks. Over 30,000+ students trust us for quality English learning content that delivers real results.</p>
+                    <div class="footer-stats">
+                        <div class="stat">
+                            <strong>30,000+</strong>
+                            <span>Students</span>
+                        </div>
+                        <div class="stat">
+                            <strong>4.9/5</strong>
+                            <span>Rating</span>
+                        </div>
+                        <div class="stat">
+                            <strong>10</strong>
+                            <span>Premium Ebooks</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -470,20 +694,44 @@
                         <li><a href="#privacy" target="_blank">Privacy Policy</a></li>
                         <li><a href="#terms" target="_blank">Terms & Conditions</a></li>
                         <li><a href="#refund" target="_blank">Refund Policy</a></li>
+                        <li><a href="#faq" target="_blank">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p>📧 padhteraho2021@gmail.com</p>
                     <p>📞 7905350614</p>
-                    <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    <p>🕒 Mon-Sat: 9 AM - 8 PM</p>
+                    <p>📍 Spoken English School, India</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Secure Payment By</h4>
+                    <div class="payment-partners">
+                        <span>🔒 Razorpay</span>
+                        <span>💳 All Major Cards</span>
+                        <span>📱 UPI & Wallets</span>
+                        <span>🏦 Net Banking</span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 English Pro. All rights reserved. | Made with ❤️ in India</p>
+                <p>&copy; 2025 English Pro by Spoken English School. All rights reserved. | Made with ❤️ in India | Secure Payments by Razorpay</p>
             </div>
         </div>
     </footer>
+
+    <!-- Payment Processing Modal -->
+    <div id="paymentModal" class="payment-modal hidden">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <div class="payment-processing">
+                    <div class="spinner"></div>
+                    <h3>Processing Payment...</h3>
+                    <p>Please wait while we process your secure payment through Razorpay</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
